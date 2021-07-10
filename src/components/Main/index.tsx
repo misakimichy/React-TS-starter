@@ -1,22 +1,27 @@
 import React from "react";
 
-const Main = () => (
-  <>
-    <h1>Main</h1>
+const Main = () => {
+  const name = "John Smith";
+  const greeting = (userName: string): string => `hello, ${name}`;
 
-    <hr />
+  return (
+    <>
+      <h1>{greeting(name)}</h1>
 
-    <h3>Environmental variables:</h3>
-    <p>
-      process.env.PRODUCTION: <b>{process.env.PRODUCTION.toString()}</b>
-    </p>
-    <p>
-      process.env.NAME: <b>{process.env.NAME}</b>
-    </p>
-    <p>
-      process.env.VERSION: <b>{process.env.VERSION}</b>
-    </p>
-  </>
-);
+      <hr />
+
+      <h3>Environmental variables:</h3>
+      <p>
+        process.env.PRODUCTION: <b>{process.env.PRODUCTION.toString()}</b>
+      </p>
+      <p>
+        process.env.NAME: <b>{process.env.NAME}</b>
+      </p>
+      <p>
+        process.env.VERSION: <b>{process.env.VERSION}</b>
+      </p>
+    </>
+  );
+};
 
 export default Main;
